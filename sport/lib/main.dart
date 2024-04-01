@@ -413,6 +413,7 @@ import 'package:flutter/material.dart';
 
 import 'workout.dart';
 import 'Brain_Exercise.dart';
+import 'community_page.dart';
 
 void main() {
   runApp(SportsApp());
@@ -478,7 +479,10 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 40, width: 10),
             ElevatedButton(
               onPressed: () {
-                // Navigate to community screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CommunityPage()),
+                );
               },
               child: Text('Community 🫂'),
             ),
@@ -572,6 +576,26 @@ class SportsListPage extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+}
+*/
+
+/*import 'package:flutter/material.dart';
+import 'home_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }
